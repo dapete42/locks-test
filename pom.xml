@@ -8,7 +8,10 @@
     <artifactId>locks-test</artifactId>
     <version>1.0.2-SNAPSHOT</version>
 
-    <url>https://dapete42.github.io/locks-test/</url>
+    <name>locks</name>
+    <description>Library for key-based locking</description>
+    <inceptionYear>2025</inceptionYear>
+    <url>https://github.com/dapete42/locks</url>
 
     <licenses>
         <license>
@@ -181,15 +184,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <!-- don't use this plugin to deploy the site (disable default execution) -->
-                        <id>default-deploy</id>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
-                    </execution>
-                </executions>
+                <configuration>
+                    <!-- don't use this plugin to deploy the site -->
+                    <skipDeploy>true</skipDeploy>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -197,6 +195,7 @@
                 <executions>
                     <execution>
                         <!-- deploy site using this plugin instead of the maven-site-plugin -->
+                        <id>scm-deploy</id>
                         <phase>site-deploy</phase>
                         <goals>
                             <goal>publish-scm</goal>

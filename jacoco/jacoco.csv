@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+locks-test,net.dapete.locks,AbstractLocks,0,103,0,6,0,25,0,7,0,4
+locks-test,net.dapete.locks,LockReference,0,11,0,0,0,4,0,2,0,2
+locks-test,net.dapete.locks,ReentrantLocks,0,4,0,0,0,2,0,1,0,1
+locks-test,net.dapete.locks,Locks,9,17,0,0,2,6,2,3,2,3
+locks-test,net.dapete.locks,ReadWriteLocks,9,28,0,0,2,9,2,4,2,4
+locks-test,net.dapete.locks,ReentrantReadWriteLocks,0,4,0,0,0,2,0,1,0,1

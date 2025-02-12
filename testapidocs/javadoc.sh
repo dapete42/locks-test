@@ -1,0 +1,1 @@
+/usr/lib64/openjdk-21/bin/javadoc -J-Duser.language= -J-Duser.country= @options @packages

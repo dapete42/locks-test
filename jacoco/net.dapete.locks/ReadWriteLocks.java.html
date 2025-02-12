@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReadWriteLocks.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">locks-test</a> &gt; <a href="index.source.html" class="el_package">net.dapete.locks</a> &gt; <span class="el_source">ReadWriteLocks.java</span></div><h1>ReadWriteLocks.java</h1><pre class="source lang-java linenums">package net.dapete.locks;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.function.Supplier;
+
+/**
+ * Key-based locking with implementations of {@link ReadWriteLock}.
+ *
+ * @param &lt;K&gt; type of key
+ * @param &lt;L&gt; type of ReadWriteLock
+ */
+public class ReadWriteLocks&lt;K, L extends ReadWriteLock&gt; extends AbstractLocks&lt;K, L&gt; {
+
+    ReadWriteLocks(Supplier&lt;L&gt; lockSupplier) {
+<span class="fc" id="L17">        super(lockSupplier);</span>
+<span class="fc" id="L18">    }</span>
+
+    /**
+     * Return an instance using {@link ReadWriteLock} implementations created by the specified {@code lockSupplier}.
+     *
+     * @param lockSupplier Supplier for instances of {@link L} (usually the constructor of a class implementing {@link ReadWriteLock})
+     * @param &lt;K&gt;          type of key
+     * @param &lt;L&gt;          type of {@link Lock}
+     * @return instance using {@code ReadWriteLock} implementations created by the specified {@code lockSupplier}
+     */
+    public static &lt;K, L extends ReadWriteLock&gt; ReadWriteLocks&lt;K, L&gt; withSupplier(Supplier&lt;L&gt; lockSupplier) {
+<span class="nc" id="L29">        return new ReadWriteLocks&lt;&gt;(lockSupplier);</span>
+    }
+
+    /**
+     * Return a {@link ReentrantReadWriteLocks} instance using {@code ReentrantReadWriteLock}
+     *
+     * @param &lt;K&gt; type of key
+     * @return {@code ReentrantReadWriteLocks} instance
+     */
+    public static &lt;K&gt; ReentrantReadWriteLocks&lt;K&gt; reentrant() {
+<span class="nc" id="L39">        return new ReentrantReadWriteLocks&lt;&gt;();</span>
+    }
+
+    /**
+     * Return a {@link ReentrantReadWriteLocks} instance using {@link ReentrantReadWriteLock}.
+     *
+     * @param keyClass class of key
+     * @param &lt;K&gt;      type of key
+     * @return {@code ReentrantReadWriteLocks} instance
+     */
+    public static &lt;K&gt; ReentrantReadWriteLocks&lt;K&gt; reentrant(Class&lt;K&gt; keyClass) {
+<span class="fc" id="L50">        return new ReentrantReadWriteLocks&lt;&gt;();</span>
+    }
+
+    /**
+     * Return a {@link ReadWriteLock} (of type {@link L}) where the {@link ReadWriteLock#readLock()} is already locked using {@link Lock#lock()}.
+     *
+     * @param key key
+     * @return already locked lock
+     */
+    public L readLock(K key) {
+<span class="fc" id="L60">        final var lock = get(key);</span>
+<span class="fc" id="L61">        lock.readLock().lock();</span>
+<span class="fc" id="L62">        return lock;</span>
+    }
+
+    /**
+     * Return a {@link ReadWriteLock} (of type {@link L}) where the {@link ReadWriteLock#writeLock()} is already locked using {@link Lock#lock()}.
+     *
+     * @param key key
+     * @return already locked lock
+     */
+    public L writeLock(K key) {
+<span class="fc" id="L72">        final var lock = get(key);</span>
+<span class="fc" id="L73">        lock.writeLock().lock();</span>
+<span class="fc" id="L74">        return lock;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

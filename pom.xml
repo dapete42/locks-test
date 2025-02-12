@@ -8,6 +8,8 @@
     <artifactId>locks-test</artifactId>
     <version>1.0.2-SNAPSHOT</version>
 
+    <url>https://dapete42.github.io/locks-test/</url>
+
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -135,6 +137,11 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.5.2</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>3.5.2</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -224,6 +231,10 @@
                         </reports>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
         </plugins>
     </reporting>

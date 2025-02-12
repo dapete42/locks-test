@@ -22,4 +22,4 @@ jobs:
       - name: Maven verify
         run: ./mvnw -B javadoc:jar source:jar verify
       - name: Maven site
-        run: ./mvnw -B site-deploy
+        run: ./mvnw -B site site:stage scm-publish:publish-scm

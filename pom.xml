@@ -47,8 +47,8 @@
 
     <distributionManagement>
         <site>
-            <id>site</id>
-            <url>scm:git:ssh://git@github.com:dapete42/locks-test.git</url>
+            <id>gh-pages</id>
+            <url>scm:git:git@github.com:dapete42/locks-test.git</url>
         </site>
     </distributionManagement>
 
@@ -180,7 +180,7 @@
                 <artifactId>maven-scm-publish-plugin</artifactId>
                 <configuration>
                     <scmBranch>gh-pages</scmBranch>
-                    <tryUpdate>true</tryUpdate>
+                    <tryUpdate>false</tryUpdate>
                 </configuration>
             </plugin>
         </plugins>

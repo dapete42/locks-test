@@ -21,3 +21,5 @@ jobs:
           cache: maven
       - name: Maven verify
         run: ./mvnw -B javadoc:jar source:jar verify
+      - name: Maven site
+        run: ./mvnw -B site-deploy

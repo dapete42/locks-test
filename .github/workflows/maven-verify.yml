@@ -21,7 +21,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
-      - name: Maven verify
-        run: ./mvnw -B javadoc:jar source:jar verify
-      - name: Maven site
-        run: ./mvnw -B site-deploy
+      - name: Set up Git user
+        run: git config --global user.email "dev@dapete.net" && git config --global user.name "GitHub action"
+      - name: Maven verify and site
+        run: ./mvnw -B javadoc:jar source:jar verify site

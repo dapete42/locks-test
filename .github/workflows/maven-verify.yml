@@ -24,4 +24,4 @@ jobs:
       - name: Set up Git user
         run: git config --global user.email "dev@dapete.net" && git config --global user.name "GitHub action"
       - name: Maven verify and site
-        run: ./mvnw -B javadoc:jar source:jar verify site
+        run: ./mvnw -B javadoc:jar source:jar verify site-deploy

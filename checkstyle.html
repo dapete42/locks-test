@@ -63,7 +63,7 @@
         <main id="bodyColumn" class="span10">
 <section><a id="Checkstyle_Results"></a>
 <h1>Checkstyle Results</h1>
-<p>The following document contains the results of <a class="externalLink" href="https://checkstyle.org/">Checkstyle</a> 9.3 with sun_checks.xml ruleset.</p><section><a id="Summary"></a>
+<p>The following document contains the results of <a class="externalLink" href="https://checkstyle.org/">Checkstyle</a> 9.3 with google_checks.xml ruleset.</p><section><a id="Summary"></a>
 <h2>Summary</h2>
 <table class="table table-striped">
 <tr class="a">
@@ -72,10 +72,10 @@
 <th><img src="images/icon_warning_sml.gif" />&#160;Warnings</th>
 <th><img src="images/icon_error_sml.gif" />&#160;Errors</th></tr>
 <tr class="b">
-<td>6</td>
+<td>7</td>
 <td>0</td>
-<td>0</td>
-<td>56</td></tr></table></section><section><a id="Files"></a>
+<td>120</td>
+<td>0</td></tr></table></section><section><a id="Files"></a>
 <h2>Files</h2>
 <table class="table table-striped">
 <tr class="a">
@@ -86,33 +86,38 @@
 <tr class="b">
 <td><a href="#net.2Fdapete.2Flocks.2FAbstractLocks.java">net/dapete/locks/AbstractLocks.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>11</td></tr>
+<td>44</td>
+<td>0</td></tr>
 <tr class="a">
 <td><a href="#net.2Fdapete.2Flocks.2FLockReference.java">net/dapete/locks/LockReference.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>5</td></tr>
+<td>8</td>
+<td>0</td></tr>
 <tr class="b">
 <td><a href="#net.2Fdapete.2Flocks.2FLocks.java">net/dapete/locks/Locks.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>10</td></tr>
+<td>20</td>
+<td>0</td></tr>
 <tr class="a">
 <td><a href="#net.2Fdapete.2Flocks.2FReadWriteLocks.java">net/dapete/locks/ReadWriteLocks.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>17</td></tr>
+<td>29</td>
+<td>0</td></tr>
 <tr class="b">
+<td><a href="#net.2Fdapete.2Flocks.2FReentrantLocks.java">net/dapete/locks/ReentrantLocks.java</a></td>
+<td>0</td>
+<td>4</td>
+<td>0</td></tr>
+<tr class="a">
 <td><a href="#net.2Fdapete.2Flocks.2FReentrantReadWriteLocks.java">net/dapete/locks/ReentrantReadWriteLocks.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>1</td></tr>
-<tr class="a">
+<td>4</td>
+<td>0</td></tr>
+<tr class="b">
 <td><a href="#net.2Fdapete.2Flocks.2Fpackage-info.java">net/dapete/locks/package-info.java</a></td>
 <td>0</td>
-<td>0</td>
-<td>12</td></tr></table></section><section><a id="Rules"></a>
+<td>11</td>
+<td>0</td></tr></table></section><section><a id="Rules"></a>
 <h2>Rules</h2>
 <table class="table table-striped">
 <tr class="a">
@@ -121,38 +126,46 @@
 <th>Violations</th>
 <th>Severity</th></tr>
 <tr class="b">
-<td>coding</td>
-<td><a class="externalLink" href="https://checkstyle.org/checks/coding/hiddenfield.html">HiddenField</a></td>
-<td>2</td>
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr>
-<tr class="a">
-<td>imports</td>
-<td><a class="externalLink" href="https://checkstyle.org/checks/imports/unusedimports.html">UnusedImports</a>
+<td>indentation</td>
+<td><a class="externalLink" href="https://checkstyle.org/checks/indentation/indentation.html">Indentation</a>
 <ul>
-<li>processJavadoc: <code>&quot;false&quot;</code></li></ul></td>
-<td>3</td>
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr>
-<tr class="b">
+<li>throwsIndent: <code>&quot;4&quot;</code></li>
+<li>arrayInitIndent: <code>&quot;2&quot;</code></li>
+<li>caseIndent: <code>&quot;2&quot;</code></li>
+<li>basicOffset: <code>&quot;2&quot;</code></li>
+<li>braceAdjustment: <code>&quot;2&quot;</code></li>
+<li>lineWrappingIndentation: <code>&quot;4&quot;</code></li></ul></td>
+<td>97</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td></tr>
+<tr class="a">
 <td>javadoc</td>
-<td><a class="externalLink" href="https://checkstyle.org/checks/javadoc/javadocstyle.html">JavadocStyle</a></td>
-<td>1</td>
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr>
+<td><a class="externalLink" href="https://checkstyle.org/checks/javadoc/javadocparagraph.html">JavadocParagraph</a></td>
+<td>2</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td></tr>
+<tr class="b">
+<td></td>
+<td><a class="externalLink" href="https://checkstyle.org/checks/javadoc/missingjavadoctype.html">MissingJavadocType</a>
+<ul>
+<li>scope: <code>&quot;protected&quot;</code></li>
+<li>excludeScope: <code>&quot;nothing&quot;</code></li>
+<li>tokens: <code>&quot;CLASS_DEF, INTERFACE_DEF, ENUM_DEF,                       RECORD_DEF, ANNOTATION_DEF&quot;</code></li></ul></td>
+<td>2</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td></tr>
 <tr class="a">
 <td></td>
-<td><a class="externalLink" href="https://checkstyle.org/checks/javadoc/javadocvariable.html">JavadocVariable</a></td>
-<td>5</td>
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr>
+<td><a class="externalLink" href="https://checkstyle.org/checks/javadoc/summaryjavadoc.html">SummaryJavadoc</a>
+<ul>
+<li>forbiddenSummaryFragments: <code>&quot;^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )&quot;</code></li></ul></td>
+<td>1</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td></tr>
 <tr class="b">
-<td>misc</td>
-<td><a class="externalLink" href="https://checkstyle.org/checks/misc/finalparameters.html">FinalParameters</a></td>
-<td>14</td>
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr>
-<tr class="a">
 <td>sizes</td>
 <td><a class="externalLink" href="https://checkstyle.org/checks/sizes/linelength.html">LineLength</a>
 <ul>
-<li>fileExtensions: <code>&quot;java&quot;</code></li></ul></td>
-<td>31</td>
+<li>fileExtensions: <code>&quot;java&quot;</code></li>
+<li>max: <code>&quot;100&quot;</code></li>
+<li>ignorePattern: <code>&quot;^package.*|^import.*|a href|href|http://|https://|ftp://&quot;</code></li></ul></td>
+<td>18</td>
 <td><img src="images/icon_error_sml.gif" />&#160;Error</td></tr></table></section><section><a id="Details"></a>
 <h2>Details</h2><section><a id="net.2Fdapete.2Flocks.2FAbstractLocks.java"></a>
 <h3>net/dapete/locks/AbstractLocks.java</h3>
@@ -164,71 +177,269 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>javadoc</td>
-<td>JavadocVariable</td>
-<td>Missing a Javadoc comment.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'member def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>18</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 86).</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'member def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>20</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>javadoc</td>
-<td>JavadocVariable</td>
-<td>Missing a Javadoc comment.</td>
-<td>20</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>javadoc</td>
-<td>JavadocVariable</td>
-<td>Missing a Javadoc comment.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'member def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>22</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>javadoc</td>
-<td>JavadocVariable</td>
-<td>Missing a Javadoc comment.</td>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'member def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>24</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter lockSupplier should be final.</td>
-<td>26</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>coding</td>
-<td>HiddenField</td>
-<td>'lockSupplier' hides a field.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>26</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter key should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>27</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>28</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>36</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 97).</td>
-<td>44</td></tr>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>37</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 87).</td>
-<td>70</td></tr>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>38</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 95).</td>
-<td>76</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FLockReference.java"></a>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' has incorrect indentation level 8, expected level should be 4.</td>
+<td>39</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>40</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>41</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' has incorrect indentation level 12, expected level should be 6.</td>
+<td>42</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child has incorrect indentation level 16, expected level should be 8.</td>
+<td>43</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child has incorrect indentation level 16, expected level should be 8.</td>
+<td>44</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if' child has incorrect indentation level 16, expected level should be 8.</td>
+<td>45</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'if rcurly' has incorrect indentation level 12, expected level should be 6.</td>
+<td>46</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else' child has incorrect indentation level 16, expected level should be 8.</td>
+<td>47</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'else rcurly' has incorrect indentation level 12, expected level should be 6.</td>
+<td>48</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>49</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>50</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>51</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>52</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>59</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>60</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>61</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' has incorrect indentation level 8, expected level should be 4.</td>
+<td>62</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>63</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>64</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>65</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>66</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>67</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>72</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>73</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' has incorrect indentation level 8, expected level should be 4.</td>
+<td>74</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>75</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'while' has incorrect indentation level 12, expected level should be 6.</td>
+<td>76</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'while' child has incorrect indentation level 16, expected level should be 8.</td>
+<td>77</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'while rcurly' has incorrect indentation level 12, expected level should be 6.</td>
+<td>78</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'try rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>79</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally' child has incorrect indentation level 12, expected level should be 6.</td>
+<td>80</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'finally rcurly' has incorrect indentation level 8, expected level should be 4.</td>
+<td>81</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>82</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FLockReference.java"></a>
 <h3>net/dapete/locks/LockReference.java</h3>
 <table class="table table-striped">
 <tr class="a">
@@ -238,35 +449,53 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>javadoc</td>
-<td>JavadocVariable</td>
-<td>Missing a Javadoc comment.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'member def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>8</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter key should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>10</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>coding</td>
-<td>HiddenField</td>
-<td>'key' hides a field.</td>
-<td>10</td></tr>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>11</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter value should be final.</td>
-<td>10</td></tr>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>12</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter referenceQueue should be final.</td>
-<td>10</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FLocks.java"></a>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>13</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>15</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>16</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>17</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FLocks.java"></a>
 <h3>net/dapete/locks/Locks.java</h3>
 <table class="table table-striped">
 <tr class="a">
@@ -276,65 +505,125 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>imports</td>
-<td>UnusedImports</td>
-<td>Unused import - java.util.concurrent.locks.ReentrantLock.</td>
-<td>4</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter lockSupplier should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>15</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>16</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>17</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 107).</td>
+<td>Line is longer than 100 characters (found 107).</td>
 <td>20</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 125).</td>
+<td>Line is longer than 100 characters (found 125).</td>
 <td>22</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 104).</td>
+<td>Line is longer than 100 characters (found 104).</td>
 <td>25</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 90).</td>
-<td>27</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter lockSupplier should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>27</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter keyClass should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>28</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>29</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>37</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>38</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>39</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>48</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 90).</td>
-<td>53</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter key should be final.</td>
-<td>58</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FReadWriteLocks.java"></a>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>49</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>50</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>58</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>59</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>60</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>61</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>62</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FReadWriteLocks.java"></a>
 <h3>net/dapete/locks/ReadWriteLocks.java</h3>
 <table class="table table-striped">
 <tr class="a">
@@ -344,107 +633,211 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>imports</td>
-<td>UnusedImports</td>
-<td>Unused import - java.util.concurrent.locks.Lock.</td>
-<td>3</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>imports</td>
-<td>UnusedImports</td>
-<td>Unused import - java.util.concurrent.locks.ReentrantReadWriteLock.</td>
-<td>5</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 85).</td>
-<td>14</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter lockSupplier should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>16</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>17</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>18</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 116).</td>
+<td>Line is longer than 100 characters (found 116).</td>
 <td>21</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 134).</td>
+<td>Line is longer than 100 characters (found 134).</td>
 <td>23</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 113).</td>
+<td>Line is longer than 100 characters (found 113).</td>
 <td>26</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 108).</td>
-<td>28</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter lockSupplier should be final.</td>
+<td>Line is longer than 100 characters (found 108).</td>
 <td>28</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>28</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>29</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>30</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>javadoc</td>
-<td>JavadocStyle</td>
-<td>First sentence should end with a period.</td>
+<td>SummaryJavadoc</td>
+<td>First sentence of Javadoc is missing an ending period.</td>
 <td>32</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 93).</td>
-<td>33</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 94).</td>
-<td>43</td></tr>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>38</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter keyClass should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>39</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>40</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>49</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>50</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>51</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 145).</td>
+<td>Line is longer than 100 characters (found 145).</td>
 <td>54</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter key should be final.</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
 <td>59</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>60</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>61</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>62</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>63</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 146).</td>
+<td>Line is longer than 100 characters (found 146).</td>
 <td>66</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>misc</td>
-<td>FinalParameters</td>
-<td>Parameter key should be final.</td>
-<td>71</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FReentrantReadWriteLocks.java"></a>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>71</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>72</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>73</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>74</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'method def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>75</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FReentrantLocks.java"></a>
+<h3>net/dapete/locks/ReentrantLocks.java</h3>
+<table class="table table-striped">
+<tr class="a">
+<th>Severity</th>
+<th>Category</th>
+<th>Rule</th>
+<th>Message</th>
+<th>Line</th></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>javadoc</td>
+<td>MissingJavadocType</td>
+<td>Missing a Javadoc comment.</td>
+<td>5</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>7</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>8</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>9</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2FReentrantReadWriteLocks.java"></a>
 <h3>net/dapete/locks/ReentrantReadWriteLocks.java</h3>
 <table class="table table-striped">
 <tr class="a">
@@ -454,11 +847,29 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 91).</td>
-<td>5</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2Fpackage-info.java"></a>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>javadoc</td>
+<td>MissingJavadocType</td>
+<td>Missing a Javadoc comment.</td>
+<td>5</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def modifier' has incorrect indentation level 4, expected level should be 2.</td>
+<td>7</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def' child has incorrect indentation level 8, expected level should be 4.</td>
+<td>8</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>indentation</td>
+<td>Indentation</td>
+<td>'ctor def rcurly' has incorrect indentation level 4, expected level should be 2.</td>
+<td>9</td></tr></table></section><section><a id="net.2Fdapete.2Flocks.2Fpackage-info.java"></a>
 <h3>net/dapete/locks/package-info.java</h3>
 <table class="table table-striped">
 <tr class="a">
@@ -468,76 +879,70 @@
 <th>Message</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 123).</td>
+<td>Line is longer than 100 characters (found 123).</td>
 <td>3</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 160).</td>
+<td>Line is longer than 100 characters (found 160).</td>
 <td>4</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 92).</td>
-<td>12</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 113).</td>
+<td>Line is longer than 100 characters (found 113).</td>
 <td>13</td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 90).</td>
-<td>14</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 110).</td>
+<td>Line is longer than 100 characters (found 110).</td>
 <td>15</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 131).</td>
+<td>Line is longer than 100 characters (found 131).</td>
 <td>16</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>javadoc</td>
+<td>JavadocParagraph</td>
+<td>&lt;p&gt; tag should be placed immediately before the first word, with no space after.</td>
+<td>18</td></tr>
+<tr class="b">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
+<td>javadoc</td>
+<td>JavadocParagraph</td>
+<td>&lt;p&gt; tag should be preceded with an empty line.</td>
+<td>18</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 122).</td>
+<td>Line is longer than 100 characters (found 122).</td>
 <td>19</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 101).</td>
+<td>Line is longer than 100 characters (found 101).</td>
 <td>20</td></tr>
 <tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 151).</td>
+<td>Line is longer than 100 characters (found 151).</td>
 <td>22</td></tr>
 <tr class="b">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
+<td><img src="images/icon_warning_sml.gif" />&#160;Warning</td>
 <td>sizes</td>
 <td>LineLength</td>
-<td>Line is longer than 80 characters (found 99).</td>
-<td>23</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" />&#160;Error</td>
-<td>sizes</td>
-<td>LineLength</td>
-<td>Line is longer than 80 characters (found 156).</td>
+<td>Line is longer than 100 characters (found 156).</td>
 <td>26</td></tr></table></section></section></section>
         </main>
       </div>

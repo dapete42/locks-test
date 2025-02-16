@@ -45,7 +45,7 @@
     <distributionManagement>
         <site>
             <id>gh-pages</id>
-            <url>scm:git:https://github.com/dapete42/locks-test</url>
+            <url>scm:git:git@github.com:dapete42/locks-test.git</url>
         </site>
     </distributionManagement>
 

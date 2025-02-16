@@ -11,8 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 21
@@ -21,10 +19,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
-      - name: Set up Git user
-        run: git config --global user.email "dev@dapete.net" && git config --global user.name "GitHub action"
-      - uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY }}
-      - name: Maven verify and site
-        run: ./mvnw -B javadoc:jar source:jar verify site-deploy
+      - name: Maven verify
+        run: ./mvnw -B javadoc:jar source:jar verify site
